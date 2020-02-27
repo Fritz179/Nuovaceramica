@@ -1,0 +1,17 @@
+{
+  "name": "nuovaceramica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/main.js",
+  "scripts": {
+    "start": "nodemon ./app/main.js",
+    "fritz": "node ./app/main.js"
+  },
+  "author": "Fritz_179",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}

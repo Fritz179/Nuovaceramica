@@ -1,0 +1,7 @@
+.env
+img
+node_modules
+
+#original size images, in any folder
+original
+old
