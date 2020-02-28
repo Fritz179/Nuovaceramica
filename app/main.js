@@ -13,9 +13,10 @@ app.get('/fa-solid.woff2', (req, res) => {
   res.sendFile(path.join(__dirname, '/template/fa-solid.woff2'))
 })
 
-const fotoDesc = require('./setup/fotoDesc.json')
+const fotoDesc = require('./setup/fotoDesc.json').map((desc, i) => ({...desc, i}))
+fotoDesc.for
 const fotoNums = {
-  stufe: [],
+  stufe: [2, 6, 14, 21, 25],
   piastrelle: [],
   bagno: [],
   entrate: [],
