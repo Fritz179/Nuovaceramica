@@ -17,20 +17,18 @@ const fotoDesc = require('./setup/fotoDesc.json').map((desc, i) => ({...desc, i}
 fotoDesc.for
 const fotoNums = {
   stufe: [2, 6, 14, 21, 25],
-  piastrelle: [],
-  bagno: [],
-  entrate: [],
+  bagno: [3, 7, 10, 11, 12, 15, 16, 17, 18, 19, 20, 22],
+  entrate: [4, 5, 24, 23],
   all: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 }
 
 app.get('/galleria/:filter', (req, res) => {
-  const cards = fotoNums[req.params.filter] || fotoNums.all
-
-  res.render('galleria/index.ejs', {cards: cards.map(num => fotoDesc[num])})
+  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'all'
+  res.render('galleria/index.ejs', {cards: fotoNums[filter].map(num => fotoDesc[num]), filter})
 })
 
 app.get('/galleria', (req, res) => {
-  res.render('galleria/index.ejs', {cards: fotoNums.all.map(num => fotoDesc[num])})
+  res.render('galleria/index.ejs', {cards: fotoNums.all.map(num => fotoDesc[num]), filter: 'all'})
 });
 
 ['ditta', 'locazione', 'servizi'].forEach(dir => {

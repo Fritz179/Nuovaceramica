@@ -13,6 +13,13 @@
   <style><%- include('./style.css'); %></style>
   <div class="cards-wrapper">
     <div class="container">
+      <section class="filters">
+        <a href="/galleria/all" <%- filter == 'all' ? 'class="clicked"' : '' %>>Tutto</a>
+        <a href="/galleria/stufe" <%- filter == 'stufe' ? 'class="clicked"' : '' %>>Stufe</a>
+        <a href="/galleria/bagno" <%- filter == 'bagno' ? 'class="clicked"' : '' %>>Bagno</a>
+        <a href="/galleria/entrate" <%- filter == 'entrate' ? 'class="clicked"' : '' %>>Entrate</a>
+      </section>
+
       <section class="cards">
 
         <% cards.forEach(card => { %>
