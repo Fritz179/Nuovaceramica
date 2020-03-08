@@ -9,6 +9,7 @@ module.exports = (app, dirname) => {
   app.use('/fonts', express.static(path.join(dirname, 'template/fonts')))
 
   app.use(express.static(path.join(dirname, 'home')))
+  app.use(express.static(path.join(dirname, 'favicon')))
 
   app.get('/favicon.ico', (req, res) => res.sendFile(path.join(dirname, 'template/favicon.png')))
   app.get('/robots.txt', (req, res) => res.sendFile(path.join(dirname, 'template/robots.txt')))
