@@ -6,7 +6,7 @@ const path = require('path')
 require('./setup/express.js')(app, __dirname);
 
 app.get('/', (req, res) => {
-  res.render('home/index.ejs')
+  res.render('home/index.ejs', {dir: 'home'})
 })
 
 app.get('/fa-solid.woff2', (req, res) => {
@@ -18,22 +18,23 @@ fotoDesc.for
 const fotoNums = {
   stufe: [2, 6, 14, 21, 25],
   bagno: [3, 7, 10, 11, 12, 15, 16, 17, 18, 19, 20, 22],
-  entrate: [4, 5, 24, 23],
-  all: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+  piastrelle: [4, 5, 24, 23],
+  resina: [4, 5, 24, 23],
+  tutto: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 }
 
 app.get('/galleria/:filter', (req, res) => {
-  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'all'
-  res.render('galleria/index.ejs', {cards: fotoNums[filter].map(num => fotoDesc[num]), filter})
+  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'tutto'
+  res.render('galleria/index.ejs', {cards: fotoNums[filter].map(num => fotoDesc[num]), filter, dir: 'galleria'})
 })
 
 app.get('/galleria', (req, res) => {
-  res.render('galleria/index.ejs', {cards: fotoNums.all.map(num => fotoDesc[num]), filter: 'all'})
+  res.render('galleria/index.ejs', {cards: fotoNums.tutto.map(num => fotoDesc[num]), filter: 'tutto', dir: 'galleria'})
 });
 
-['ditta', 'locazione', 'servizi'].forEach(dir => {
+['azienda', 'contatti', 'servizi', 'concessionarie'].forEach(dir => {
   app.get(`/${dir}`, (req, res) => {
-    res.render(`${dir}/index.ejs`)
+    res.render(`${dir}/index.ejs`, {dir})
   })
 })
 

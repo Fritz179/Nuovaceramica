@@ -15,14 +15,15 @@
 <div class="nav-wrapper">
   <div class="container">
     <nav class="main-nav">
-      <img src="/img/logo.jpg" id="logo" alt="Logo" class="logo">
+      <img src="/img/logo.jpg" id="logo" alt="Logo">
 
       <ul>
-        <li><a href="/">Home <i class="fas fa-chevron-right"></i></a></li>
-        <li><a href="/servizi">Servizi <i class="fas fa-chevron-right"></i></a></li>
-        <li><a href="/galleria">Galleria <i class="fas fa-chevron-right"></i></a></li>
-        <li><a href="/ditta">Ditta <i class="fas fa-chevron-right"></i></a></li>
-        <li><a href="/locazione">Dove siamo <i class="fas fa-chevron-right"></i></a></li>
+        <li><a href="/">Home <i class="fas fa-chevron-<%= dir == 'home' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/azienda">Azienda <i class="fas fa-chevron-<%= dir == 'azienda' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/servizi">Servizi <i class="fas fa-chevron-<%= dir == 'servizi' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/galleria">Galleria <i class="fas fa-chevron-<%= dir == 'galleria' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/concessionarie">Concessionarie <i class="fas fa-chevron-<%= dir == 'concessionarie' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/contatti">Contatti <i class="fas fa-chevron-<%= dir == 'contatti' ? 'left' : 'right'%>"></i></a></li>
       </ul>
     </nav>
   </div>
