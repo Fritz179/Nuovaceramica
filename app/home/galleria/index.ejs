@@ -24,16 +24,11 @@
       <section class="cards">
 
         <% cards.forEach(card => { %>
-          <div class="card">
-            <img src="./img/<%= card.i %>.jpg" alt="cart.title">
-            <div class="card-body">
-              <h2><%= card.title %></h2>
-              <p><%= card.p %></p>
-            </div>
-          </div>
+          <img src="./img/<%= card.i %>.jpg" class="card" alt="<%= card.title %>">
         <% }) %>
       </section>
     </div>
   </div>
 </body>
+<footer><%- include('footer'); %></footer>
 </html>

@@ -53,34 +53,20 @@
   border: var(--border);
 }
 
-.cards .card img {
-  width: 100%;
-
-  border-top: var(--border);
-  border-top-left-radius: var(--card-radius);
-  border-top-right-radius: var(--card-radius);
-}
-
-.cards .card .card-body {
-  max-width: 85%;
-  margin: 5%;
-}
-
-.cards .card .card-body h2 {
-  margin-bottom: 5px;
-}
-
-.cards .card .card-body a {
-  display: inline-block;
-  padding-top: 10px;
-  color: #0067b8;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 @media (max-width: 1200px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters a {
+    font-size: 2vw;
+    margin: 0 2vw 4vw;
+    padding: 0.6vw 1.5vw;
+    background-color: #fff;
+    color: #000;
+    border-radius: var(--filter-radius);
+    box-shadow: var(--shadow);
+    border: var(--border);
   }
 }
 

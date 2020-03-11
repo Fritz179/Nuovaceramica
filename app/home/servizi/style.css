@@ -1,3 +1,10 @@
+.servizi-wrapper {
+  background: var(--secondary);
+  padding: 40px 0;
+}
+
 .servizi {
   font-size: 30px;
+  list-style: initial;
+  padding-left: 32px;
 }
