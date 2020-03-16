@@ -13,23 +13,21 @@ app.get('/fa-solid.woff2', (req, res) => {
   res.sendFile(path.join(__dirname, '/template/fa-solid.woff2'))
 })
 
-const fotoDesc = require('./setup/fotoDesc.json').map((desc, i) => ({...desc, i}))
-fotoDesc.for
 const fotoNums = {
-  stufe: [2, 6, 14, 21, 25],
-  bagno: [3, 7, 10, 11, 12, 15, 16, 17, 18, 19, 20, 22],
-  piastrelle: [4, 5, 24, 23],
-  resina: [4, 5, 24, 23],
-  tutto: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+  stufe: [21, 6, 14, 25, 29, 28, 2, 27],
+  bagno: [19, 7, 10, 11, 12, 15, 16, 17, 18, 22, 20, 3],
+  piastrelle: [18, 24, 3, 4, 23, 5, 13, 1, 7, 6, 12, 21, 10, 22, 25, 19, 9, 8, 17, 0],
+  resina: [16, 26, 20, 11, 15],
+  tutto: [18, 24, 3, 4, 23, 5, 13, 1, 7, 6, 12, 21, 28, 29, 14, 10, 22, 25, 19, 9, 8, 17, 0, 2, 11, 15, 16, 20, 26, 27]
 }
 
 app.get('/galleria/:filter', (req, res) => {
   const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'tutto'
-  res.render('galleria/index.ejs', {cards: fotoNums[filter].map(num => fotoDesc[num]), filter, dir: 'galleria'})
+  res.render('galleria/index.ejs', {cards: fotoNums[filter], filter, dir: 'galleria'})
 })
 
 app.get('/galleria', (req, res) => {
-  res.render('galleria/index.ejs', {cards: fotoNums.tutto.map(num => fotoDesc[num]), filter: 'tutto', dir: 'galleria'})
+  res.render('galleria/index.ejs', {cards: fotoNums.tutto, filter: 'tutto', dir: 'galleria'})
 });
 
 ['azienda', 'contatti', 'servizi', 'concessionarie'].forEach(dir => {

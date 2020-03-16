@@ -18,3 +18,17 @@
   font-size: 20px;
   padding-left: 40px;
 }
+
+@media (max-width: 500px) {
+  .conc h1 {
+    font-size: 25px;
+  }
+
+  .conc h4 {
+    font-size: 20px;
+  }
+
+  .conc ul {
+    font-size: 18px;
+  }
+}

@@ -61,3 +61,15 @@
     font-size: 2.5vw;
   }
 }
+
+@media (max-width: 600px) {
+  .main-nav ul li {
+    font-size: 2.35vw;
+  }
+}
+
+@media (max-width: 260px) {
+  .main-nav ul li {
+    font-size: 2vw;
+  }
+}
