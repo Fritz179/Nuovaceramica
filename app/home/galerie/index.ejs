@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="La nostra azienda offre alla clientela, da oltre 20 anni, un servizio accurato e garantito nella fornitura e nella posa specializzata di pavimenti e rivestimenti.">
+  <title>Galleria - Nuovaceramica</title>
+</head>
+<body>
+  <%- include('navbar_de'); %>
+
+  <style><%- include('./style.css'); %></style>
+  <div class="cards-wrapper">
+    <div class="container">
+      <section class="filters">
+        <a href="/galleria/tutto" <%- filter == 'tutto' ? 'class="clicked"' : '' %>>Tutto</a>
+        <a href="/galleria/stufe" <%- filter == 'stufe' ? 'class="clicked"' : '' %>>Stufe e fornelli</a>
+        <a href="/galleria/bagno" <%- filter == 'bagno' ? 'class="clicked"' : '' %>>Bagno</a>
+        <a href="/galleria/piastrelle" <%- filter == 'piastrelle' ? 'class="clicked"' : '' %>>Piastrelle e pietre naturali</a>
+        <a href="/galleria/resina" <%- filter == 'resina' ? 'class="clicked"' : '' %>>Resina</a>
+      </section>
+
+      <section class="cards">
+
+        <% cards.forEach(card => { %>
+          <img src="/galleria/img/<%= card %>.jpg" class="card" alt="<%= card.title %>">
+        <% }) %>
+      </section>
+    </div>
+  </div>
+</body>
+<footer><%- include('footer'); %></footer>
+</html>

@@ -1,5 +1,13 @@
-.nav-wrapper {
-  /* background: var(--primary) */
+.lang {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+}
+
+.lang a {
+  font-size: 35px;
+  margin: 40px 0;
+  float: right;
 }
 
 .main-nav {

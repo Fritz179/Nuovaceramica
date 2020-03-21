@@ -30,7 +30,16 @@ app.get('/galleria', (req, res) => {
   res.render('galleria/index.ejs', {cards: fotoNums.tutto, filter: 'tutto', dir: 'galleria'})
 });
 
-['azienda', 'contatti', 'servizi', 'concessionarie'].forEach(dir => {
+app.get('/galerie/:filter', (req, res) => {
+  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'tutto'
+  res.render('galerie/index.ejs', {cards: fotoNums[filter], filter, dir: 'galerie'})
+})
+
+app.get('/galerie', (req, res) => {
+  res.render('galerie/index.ejs', {cards: fotoNums.tutto, filter: 'tutto', dir: 'galerie'})
+});
+
+['de', 'azienda', 'firma', 'azienda_old', 'contatti', 'kontakte', 'servizi', 'dienstleistungen', 'concessionarie', 'hauser'].forEach(dir => {
   app.get(`/${dir}`, (req, res) => {
     res.render(`${dir}/index.ejs`, {dir})
   })

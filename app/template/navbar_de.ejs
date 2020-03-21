@@ -1,0 +1,36 @@
+<!-- Main Style -->
+<style><%- include('style.css'); %></style>
+
+<!-- Navbar -->
+<style><%- include('navbar.css'); %></style>
+
+<!-- Chavron -->
+<style><%- include('./fas.css'); %></style>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<div class="nav-wrapper">
+  <div class="lang">
+    <div class="container">
+      <a href="/">IT</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="main-nav">
+      <img src="/img/logo.jpg" id="logo" alt="Logo">
+
+      <ul>
+        <li><a href="/de">Home <i class="fas fa-chevron-<%= dir == 'de' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/firma">Firma <i class="fas fa-chevron-<%= dir == 'firma' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/dienstleistungen">Dienstleistungen <i class="fas fa-chevron-<%= dir == 'dienstleistungen' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/galerie">Galerie <i class="fas fa-chevron-<%= dir == 'galerie' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/hauser">Häuser <i class="fas fa-chevron-<%= dir == 'hauser' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/kontakte">Kontakte <i class="fas fa-chevron-<%= dir == 'kontakte' ? 'left' : 'right'%>"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

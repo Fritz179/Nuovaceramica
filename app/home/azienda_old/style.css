@@ -1,0 +1,72 @@
+.azineda-wrapper {
+  background: var(--secondary);
+  padding: 40px 0;
+}
+
+.ditta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 100px;
+}
+
+.ditta .descrizione h1 {
+  font-size: 40px;
+}
+
+.ditta .descrizione p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.ditta img {
+  width: 100%;
+}
+
+.trovaci {
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.trovaci a {
+  opacity: 1;
+  vertical-align: baseline;
+  margin: auto;
+}
+
+ .trovaci a:hover {
+  border-bottom: 2px solid #262626;
+  opacity: 0.9;
+}
+
+ .trovaci a i {
+  padding-right: 10px;
+  padding-left: 0px;
+  transition: 0.6s;
+}
+ .trovaci a:hover i {
+  padding-left: 10px;
+  padding-right: 0px;
+  transition: 0.6s;
+}
+
+@media (max-width: 1000px) {
+  .ditta {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ditta *:nth-child(4) {
+    grid-row: 3;
+  }
+
+  .ditta .descrizione h1 {
+    font-size: 6vw;
+  }
+
+  .ditta .descrizione p {
+    font-size: 4vw;
+  }
+}
