@@ -6,8 +6,8 @@
 }
 
 .lang a {
-  margin-top: -2vw;
-  font-size: 6vw;
+  margin-top: -1.67vw;
+  font-size: 5vw;
   float: right;
 }
 
@@ -67,8 +67,8 @@
 
 @media (min-width: 1200px) {
   .lang a {
-    margin-top: -24px;
-    font-size: 72px;
+    margin-top: -20px;
+    font-size: 60px;
     float: right;
   }
 }
