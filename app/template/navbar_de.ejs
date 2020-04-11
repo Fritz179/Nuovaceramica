@@ -13,23 +13,23 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <div class="nav-wrapper">
-  <div class="lang">
+  <!-- <div class="lang">
     <div class="container">
       <a href="/<%= to %>">IT</a>
     </div>
-  </div>
+  </div> -->
 
   <div class="container">
     <nav class="main-nav">
       <img src="/img/logo.jpg" id="logo" alt="Logo">
 
       <ul>
-        <li><a href="/de">Home <i class="fas fa-chevron-<%= dir == 'de' ? 'left' : 'right'%>"></i></a></li>
         <li><a href="/firma">Firma <i class="fas fa-chevron-<%= dir == 'firma' ? 'left' : 'right'%>"></i></a></li>
         <li><a href="/dienstleistungen">Dienstleistungen <i class="fas fa-chevron-<%= dir == 'dienstleistungen' ? 'left' : 'right'%>"></i></a></li>
         <li><a href="/galerie">Galerie <i class="fas fa-chevron-<%= dir == 'galerie' ? 'left' : 'right'%>"></i></a></li>
         <li><a href="/hauser">Häuser <i class="fas fa-chevron-<%= dir == 'hauser' ? 'left' : 'right'%>"></i></a></li>
         <li><a href="/kontakte">Kontakte <i class="fas fa-chevron-<%= dir == 'kontakte' ? 'left' : 'right'%>"></i></a></li>
+        <li><a href="/<%= to %>">IT</a></li>
       </ul>
     </nav>
   </div>

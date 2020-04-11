@@ -29,12 +29,16 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .images {
     flex-direction: column;
   }
 
   .images img {
     width: 100%;
+  }
+
+  .images img:nth-child(2) {
+    display: block;
   }
 }

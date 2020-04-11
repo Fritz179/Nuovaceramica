@@ -1,4 +1,4 @@
-.lang {
+/* .lang {
   position: absolute;
   width: 100%;
   margin: auto;
@@ -9,7 +9,7 @@
   margin-top: -1.67vw;
   font-size: 5vw;
   float: right;
-}
+} */
 
 .main-nav {
   display: flex;
@@ -76,18 +76,18 @@
 
 @media (max-width: 1000px) {
   .main-nav ul li {
-    font-size: 2.5vw;
+    font-size: 2.4vw;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main-nav ul li {
-    font-size: 2.35vw;
+    font-size: 2.2vw;
   }
 }
 
-@media (max-width: 260px) {
+@media (max-width: 300px) {
   .main-nav ul li {
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
 }

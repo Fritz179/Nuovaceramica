@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="La nostra azienda offre alla clientela, da oltre 20 anni, un servizio accurato e garantito nella fornitura e nella posa specializzata di pavimenti e rivestimenti.">
-  <title>Galleria - Nuovaceramica</title>
+  <title>Galerie - Nuovaceramica</title>
 </head>
 <body>
   <%- include('navbar_de', {to: 'galleria'}); %>
@@ -14,11 +14,9 @@
   <div class="cards-wrapper">
     <div class="container">
       <section class="filters">
-        <a href="/galleria/tutto" <%- filter == 'tutto' ? 'class="clicked"' : '' %>>Tutto</a>
-        <a href="/galleria/stufe" <%- filter == 'stufe' ? 'class="clicked"' : '' %>>Stufe e fornelli</a>
-        <a href="/galleria/bagno" <%- filter == 'bagno' ? 'class="clicked"' : '' %>>Bagno</a>
-        <a href="/galleria/piastrelle" <%- filter == 'piastrelle' ? 'class="clicked"' : '' %>>Piastrelle e pietre naturali</a>
-        <a href="/galleria/resina" <%- filter == 'resina' ? 'class="clicked"' : '' %>>Resina</a>
+        <a href="/galerie/piastrelle" <%- filter == 'piastrelle' ? 'class="clicked"' : '' %>>Fliesen und Natursteine</a>
+        <a href="/galerie/resina" <%- filter == 'resina' ? 'class="clicked"' : '' %>>Harz</a>
+        <a href="/galerie/stufe" <%- filter == 'stufe' ? 'class="clicked"' : '' %>>Öfen</a>
       </section>
 
       <section class="cards">
