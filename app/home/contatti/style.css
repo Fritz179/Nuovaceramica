@@ -27,6 +27,12 @@
   border: var(--border);
 }
 
+.facebook {
+  height: 80px;
+  vertical-align: top;
+  padding: 10px;
+}
+
 @media (max-width: 1100px) {
   .contatti {
     flex-direction: column;
