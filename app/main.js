@@ -28,16 +28,16 @@ app.get('/galleria', (req, res) => {
   res.render('galleria/index.ejs', {cards: fotoNums.piastrelle, filter: 'piastrelle', dir: 'galleria'})
 });
 
-app.get('/galerie/:filter', (req, res) => {
+app.get('/fotos/:filter', (req, res) => {
   const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'tutto'
-  res.render('galerie/index.ejs', {cards: fotoNums[filter], filter, dir: 'galerie'})
+  res.render('fotos/index.ejs', {cards: fotoNums[filter], filter, dir: 'fotos'})
 })
 
-app.get('/galerie', (req, res) => {
-  res.render('galerie/index.ejs', {cards: fotoNums.piastrelle, filter: 'piastrelle', dir: 'galerie'})
+app.get('/fotos', (req, res) => {
+  res.render('fotos/index.ejs', {cards: fotoNums.piastrelle, filter: 'piastrelle', dir: 'fotos'})
 });
 
-['azienda', 'firma', 'contatti', 'kontakte', 'servizi', 'dienstleistungen', 'concessionarie', 'hauser'].forEach(dir => {
+['azienda', 'firma', 'contatti', 'kontakt', 'servizi', 'angebot', 'concessionarie', 'partner'].forEach(dir => {
   app.get(`/${dir}`, (req, res) => {
     res.render(`${dir}/index.ejs`, {dir})
   })
@@ -46,7 +46,7 @@ app.get('/galerie', (req, res) => {
 //connect the error page to all remaining requests (404)
 app.get('*', (req, res) => {
   if (!res._header) {
-    res.render('404')
+    res.redirect('/')
   }
 })
 
