@@ -6,7 +6,7 @@ const path = require('path')
 require('./setup/express.js')(app, __dirname);
 
 app.get('/', (req, res) => {
-  res.redirect('/azienda')
+  res.render(`azienda/index.ejs`, {dir: 'azienda'})
 })
 
 app.get('/fa-solid.woff2', (req, res) => {
