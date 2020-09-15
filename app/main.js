@@ -13,9 +13,16 @@ app.get('/fa-solid.woff2', (req, res) => {
   res.sendFile(path.join(__dirname, '/template/fa-solid.woff2'))
 })
 
+/*
+  https://compressimage.toolur.com/
+
+  C, 80%, Normal, W: 600 H: 0
+*/
+
 const fotoNums = {
-  stufe: [21, 35, 6, 14, 25, 29, 28, 2, 27],
-  piastrelle: [18, 24, 4, 31, 13, 34, 3, 23, 5, 32, 1, 7, 12, 33, 10, 22, 19, 9, 8, 17, 0],
+  // stufe: [21, 35, 6, 14, 25, 29, 28, 2, 27, 37],
+  stufe: [21, 29, 37, 35, 14, 6, 25, 28, 2, 27],
+  piastrelle: [18, 24, 4, 42, 13, 1, 3, 23, 5, 32, 34, 7, 12, 39, 41, 22, 19, 40, 33, 9, 10, 44, 45, 31, 8, 17, 0],
   resina: [16, 26, 20, 11, 15]
 }
 
