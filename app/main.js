@@ -27,7 +27,7 @@ const fotoNums = {
 }
 
 app.get('/galleria/:filter', (req, res) => {
-  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'tutto'
+  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'piastrelle'
   res.render('galleria/index.ejs', {cards: fotoNums[filter], filter, dir: 'galleria'})
 })
 
@@ -36,7 +36,7 @@ app.get('/galleria', (req, res) => {
 });
 
 app.get('/fotos/:filter', (req, res) => {
-  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'tutto'
+  const filter = Object.keys(fotoNums).includes(req.params.filter) ? req.params.filter : 'piastrelle'
   res.render('fotos/index.ejs', {cards: fotoNums[filter], filter, dir: 'fotos'})
 })
 
