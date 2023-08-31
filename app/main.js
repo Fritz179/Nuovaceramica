@@ -44,7 +44,7 @@ app.get('/fotos', (req, res) => {
   res.render('fotos/index.ejs', {cards: fotoNums.piastrelle, filter: 'piastrelle', dir: 'fotos'})
 });
 
-['azienda', 'firma', 'contatti', 'kontakt', 'servizi', 'angebot', 'concessionarie', 'partner'].forEach(dir => {
+['azienda', 'firma', 'contatti', 'kontakt', 'servizi', 'angebot', 'concessionarie', 'partner', 'data_de', 'data_it'].forEach(dir => {
   app.get(`/${dir}`, (req, res) => {
     res.render(`${dir}/index.ejs`, {dir})
   })

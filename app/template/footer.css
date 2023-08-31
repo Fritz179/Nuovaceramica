@@ -8,3 +8,12 @@
 .footer img {
   height: 4rem;
 }
+
+.footer li a {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.footer li:hover a {
+  color: dodgerblue;
+}
