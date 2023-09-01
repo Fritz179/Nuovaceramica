@@ -59,3 +59,27 @@
 .banner button:hover {
   color: white;
 }
+
+@media (max-width: 800px) {
+  .banner {
+    height: 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    height: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner {
+    height: 30%;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner {
+    height: 40%;
+  }
+}
