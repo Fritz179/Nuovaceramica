@@ -17,3 +17,45 @@
 .footer li:hover a {
   color: dodgerblue;
 }
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.88);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.banner a {
+  color: rgb(182, 181, 181);
+  text-decoration: underline;
+}
+
+.banner a:hover {
+  color: dodgerblue;
+}
+
+.banner p {
+  margin-left: 2rem;
+}
+
+.banner button {
+  height: 2.5rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  background-color: #318640;
+  color: black;
+  border: 0;
+}
+
+.banner button:hover {
+  color: white;
+}

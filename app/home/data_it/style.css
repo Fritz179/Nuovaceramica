@@ -17,14 +17,10 @@
   color: dodgerblue;
 }
 
-h2 {
-  font-size: 28px;
+ol {
+  padding-left: 45px;
 }
 
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 20px;
+li {
+  padding: 5px;
 }

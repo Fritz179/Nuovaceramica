@@ -9,3 +9,37 @@
     <li><%- !locals.de ? '<a href="/data_it">Informativa sulla privacy</a>' : '<a href="/data_de">Datenschutzverordnung</a>' %></li>
   </ul>
 </div>
+
+<% if (locals.de) { %>
+<div class="banner", id="cookie">
+  <p>  
+    Wir setzen <a href="https://de.wikipedia.org/wiki/HTTP-Cookie" rel="noreferrer" target="_blank">Cookies</a> (eigene und von Drittanbietern) ein, um Ihnen die Nutzung unserer Webseiten zu erleichtern. Mit der weiteren Nutzung unserer Webseiten sind Sie mit dem Einsatz der Cookies einverstanden.
+    Weitere Informationen zu Cookies entnehmen Sie bitte unserer <a href="/data_de" rel="noreferrer">Datenschutzerklärung</a>.
+  </p>
+  <button id="accept">VERSTANDEN</button>
+</div>
+<% } else { %>
+  <div class="banner", id="cookie">
+    <p>  
+      Utilizziamo i <a href="https://de.wikipedia.org/wiki/HTTP-Cookie" rel="noreferrer" target="_blank">Cookies</a> (nostri e di terzi) per rendere più semplice l'utilizzo dei nostri siti web. Continuando a utilizzare il nostro sito web, acconsenti all'utilizzo dei cookie. 
+      Per ulteriori informazioni sui cookie, consultare la nostra <a href="/data_it" rel="noreferrer">politica sulla privacy</a>.
+    </p>
+    <button id="accept">ACCETTA</button>
+  </div>
+<% } %>
+
+<script>
+  const cookie = document.getElementById("cookie")
+  const accepted = localStorage.getItem("accepted")
+  
+  if (accepted) {
+    cookie.style.display = 'none'
+  }
+  
+  const button = document.getElementById('accept')
+  button.onclick = () => {
+    cookie.style.display = 'none'
+    localStorage.setItem("accepted", true)
+  }
+
+</script>
